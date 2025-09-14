@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediMingle - Book Appointment</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+        .navbar {
+            background-color: rgba(0, 128, 0, 0.8);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .title {
+            text-align: center;
+            color: white;
+            margin: 50px 0 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .title img {
+            vertical-align: middle;
+            width: 50px;
+            height: auto;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        .form-container label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: rgba(0, 128, 0, 0.8);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: rgba(0, 100, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navbar -->
+    <div class="navbar">
+        <div>
+            <img src="MM.png" alt="MediMingle " style="height: 40px;">
+        </div>
+        <div>
+            <a href="page2.html">Login/Sign Up</a>
+            <a href="page5.html">AI Chatbot</a>
+            <a href="page3.html">First-Aid Guide</a>
+            <a href="page4.html">Appointment</a>
+            <a href="page6.html">Lab & Tests</a>
+        </div>
+    </div>
+
+    <!-- Page Title -->
+    <div class="title">
+        Welcome to MediMingle <img src="butterfly_logo.png" alt="Butterfly Logo">
+    </div>
+
+    <!-- Appointment Booking Form -->
+    <div class="form-container">
+        <form id="appointmentForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="specialty">Select Specialist</label>
+            <select id="specialty" name="specialty" required>
+                <option value="">-- Select --</option>
+                <option value="General Physician">General Physician</option>
+                <option value="Dentist">Dentist</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <!-- Add more specialties here -->
+            </select>
+
+            <label for="problem">Describe Your Problem</label>
+            <input type="text" id="problem" name="problem" required>
+
+            <button type="button" onclick="submitForm()">Book Appointment</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script>
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const specialty = document.getElementById('specialty').value;
+            const problem = document.getElementById('problem').value;
+
+            if (name && email && specialty && problem) {
+                // Create Excel data
+                const wb = XLSX.utils.book_new();
+                const data = [
+                    ["Name", "Email", "Specialist", "Problem"],
+                    [name, email, specialty, problem]
+                ];
+                const ws = XLSX.utils.aoa_to_sheet(data);
+                XLSX.utils.book_append_sheet(wb, ws, "Appointments");
+
+                // Download Excel file
+                XLSX.writeFile(wb, "appointments.xlsx");
+
+                // Display success message (email sending can be implemented later)
+                alert("Appointment booked successfully! We will contact you soon.");
+                document.getElementById('appointmentForm').reset();
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background */
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00aaff, #00ffaa);
+    z-index: -1;
+  }
+  
+  /* Content Wrapper */
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Title Styling */
+  .title-container {
+    margin-bottom: 40px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 18px;
+    color: #f8f8f8;
+  }
+  
+  /* First Aid Grid */
+  .first-aid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .aid-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border: 2px solid #007b5e;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+  }
+  
+  .aid-box h3 {
+    color: #007b5e;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .aid-box p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .aid-box button {
+    background: #007b5e;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .aid-box button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .first-aid-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

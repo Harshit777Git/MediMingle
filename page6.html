@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Reports & Book Appointment - MediMingle</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: rgba(0, 128, 0, 0.8);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar img {
+            height: 40px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .container img {
+            height: 80px;
+            margin: 10px auto;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            text-align: center;
+            color: rgba(0, 128, 0, 0.8);
+        }
+
+        .section label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .section input,
+        .section select,
+        .section button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .section button {
+            background-color: rgba(0, 128, 0, 0.8);
+            color: white;
+            cursor: pointer;
+        }
+
+        .section button:hover {
+            background-color: rgba(0, 100, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <div class="navbar">
+        <img src="MM.png" alt="MediMingle Logo">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="page2.html">Login/Sign Up</a>
+            <a href="page5.html">AI Chatbot</a>
+            <a href="page3.html">First-Aid Guide</a>
+            <a href="page4.html">Appointment</a>
+            <a href="page6.html">Lab & Tests</a>
+        </div>
+    </div>
+
+    <!-- Title Section -->
+    <div class="container">
+        <img src="butterfly_logo.png" alt="Butterfly Logo">
+        <h1>Welcome to MediMingle</h1>
+    </div>
+
+    <!-- Section 1: Upload Reports -->
+    <div class="section">
+        <h2>Upload Your Test Reports</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="test-type">Select Test</label>
+            <select name="test-type" id="test-type" required>
+                <option value="CBC">CBC Test</option>
+                <option value="Blood">Blood Test</option>
+                <option value="Lipid">Lipid Profile</option>
+                <option value="Thyroid">Thyroid Test</option>
+            </select>
+
+            <label for="email">Enter Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="file">Upload Report</label>
+            <input type="file" id="file" name="testReport" required>
+
+            <input type="submit" value="Upload Report">
+        </form>
+    </div>
+
+    <!-- Section 2: Book Appointment -->
+    <div class="section">
+        <h2>Book a Test Appointment</h2>
+        <form action="/book-appointment" method="POST">
+            <label for="appointment-test">Select Test</label>
+            <select name="appointment-test" id="appointment-test" required>
+                <option value="CBC">CBC Test</option>
+                <option value="Blood">Blood Test</option>
+                <option value="Lipid">Lipid Profile</option>
+                <option value="Thyroid">Thyroid Test</option>
+            </select>
+
+            <label for="location">Select Appointment Type</label>
+            <select name="location" id="location" required>
+                <option value="Lab">Lab</option>
+                <option value="Home">Home</option>
+            </select>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+
+</body>
+</html>

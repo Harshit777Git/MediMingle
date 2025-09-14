@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Aid Awareness - MediMingle</title>
+  <style>
+    /* Reset */
+    body, h1, h2, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: rgba(0, 128, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-logo img {
+      height: 40px;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      color: white;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    /* Title Section */
+    .title-section {
+      text-align: center;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .title-section img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .title-section h1 {
+      color: rgba(234, 236, 234, 0.8);
+      font-size: 2.5em;
+    }
+
+    /* Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 90%;
+    }
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid-item h2 {
+      font-size: 1.5em;
+      color: rgba(0, 128, 0, 0.8);
+    }
+
+    .grid-item p {
+      font-size: 1em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .grid-item .view-button {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: rgba(0, 128, 0, 0.8);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+
+    .grid-item .view-button:hover {
+      background-color: rgba(0, 128, 0, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-logo">
+      <img src="MM.png" alt="MediMingle">
+      <h2>MediMingle</h2>
+    </div>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="page2.html">Login/Sign Up</a>
+      <a href="page5.html">AI Chatbot</a>
+      <a href="page3.html">First-Aid Guide</a>
+      <a href="page4.html">Appointment</a>
+      <a href="page6.html">Lab & Tests</a>
+    </div>
+  </div>
+
+  <!-- Title Section -->
+  <div class="title-section">
+    <img src="butterfly_logo.png" alt="Butterfly Logo">
+    <h1>Welcome to MediMingle</h1>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid-container">
+    <!-- Grid Items -->
+    <div class="grid-item">
+      <h2>1.Choking</h2>
+      <p>Perform abdominal thrusts and call emergency services if needed.</p>
+      <a href="https://youtu.be/tutorial1" class="view-button" target="_blank">View Tutorial</a>
+    </div>
+
+    <div class="grid-item">
+      <h2>2.Bleeding</h2>
+      <p>Apply direct pressure with a clean cloth to stop the bleeding.</p>
+      <a href="https://youtu.be/tutorial2" class="view-button" target="_blank">View Tutorial</a>
+    </div>
+
+    <div class="grid-item">
+      <h2>3.Fracture</h2>
+      <p>Immobilize the area and avoid moving the injured limb.</p>
+      <a href="https://youtu.be/tutorial3" class="view-button" target="_blank">View Tutorial</a>
+    </div>
+
+    <div class="grid-item">
+        <h2>4. Burns</h2>
+    <p>Cool the burn with running water for 10-15 minutes. Avoid applying ice directly.</p>
+    <a href="https://youtu.be/tutorial3" class="view-button" target="_blank">View Tutorial</a>
+     </div>
+
+    <div class="grid-item">
+      <h2>5. Fractures</h2>
+      <p>Immobilize the area with a splint and avoid moving the injured part.</p>
+      <a href="https://youtu.be/tutorial3" class="view-button" target="_blank">View Tutorial</a>
+     </div>
+
+  <div class="grid-item">
+    <h2>6. Snake Bites</h2>
+    <p>Keep the person calm. Immobilize the affected area and seek medical help immediately.</p>
+    <a href="https://youtu.be/tutorial3" class="view-button" target="_blank">View Tutorial</a>
+  </div>
+
+  <div class="grid-item">
+     <h2>7. Heart Attack</h2>
+     <p>Help the person sit in a comfortable position and call for emergency services. Provide aspirin if available.</p>
+     <a href="https://youtu.be/tutorial3" class="view-button" target="_blank">View Tutorial</a>
+ </div>
+
+  <div class="grid-item">
+     <h2>8. Electric Shock</h2>
+     <p>Turn off the power source and avoid touching the person until the source is off. Seek medical help immediately.</p>
+     <a href="https://youtu.be/tutorial3" class="view-button" target="_blank">View Tutorial</a>
+  </div>
+
+  <div class="grid-item">
+    <h2>9. Poisoning</h2>
+     <p>Contact a poison control center immediately and provide details of the substance ingested.</p>
+     <a href="https://youtu.be/tutorial3" class="view-button" target="_blank">View Tutorial</a>
+  </div>
+
+  <div class="grid-item">
+     <h2>10. Allergic Reactions</h2>
+     <p>Administer an epinephrine injection if prescribed and call for medical assistance.</p>
+     <a href="https://youtu.be/tutorial3" class="view-button" target="_blank">View Tutorial</a>
+  </div>
+
+ 
+
+    <!-- Add more grid items as needed -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: #228B22; /* Green color */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-logo {
+    height: 50px;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    color: #f4f4f4;
+  }
+  
+  /* Header styling */
+  .header {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #228B22;
+  }
+  
+  .header p {
+    margin-top: 10px;
+    color: #555;
+    font-size: 1.2em;
+  }
+  
+  /* Chatbot container styling */
+  .chat-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-output {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background-color: #f4f4f4;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .chat-input button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .chat-input button:hover {
+    background-color: #1c6b1c;
+  }
+  
+  /* Chat message styling */
+  .bot-message,
+  .user-message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .bot-message {
+    background-color: #f0f8ff;
+    align-self: flex-start;
+  }
+  
+  .user-message {
+    background-color: #d3f9d8;
+    align-self: flex-end;
+  }
+  
